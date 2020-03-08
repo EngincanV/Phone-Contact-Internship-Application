@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj",
+        "projectName": "Nuevo.DataAccess",
+        "projectPath": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\engin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.DataAcces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\engin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj": {
+                "projectPath": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj",
+        "projectName": "Nuevo.Entities",
+        "projectPath": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj",
+        "packagesPath": "C:\\Users\\engin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\engin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

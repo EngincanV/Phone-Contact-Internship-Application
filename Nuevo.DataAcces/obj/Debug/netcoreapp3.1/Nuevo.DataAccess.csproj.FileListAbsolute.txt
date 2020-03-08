@@ -1,0 +1,11 @@
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.DataAccess.deps.json
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.DataAccess.dll
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.DataAccess.pdb
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.Entities.dll
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.Entities.pdb
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.csprojAssemblyReference.cache
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.AssemblyInfoInputs.cache
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.AssemblyInfo.cs
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.csproj.CopyComplete
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.dll
+C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.pdb
