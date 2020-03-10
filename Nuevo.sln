@@ -3,13 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuevo.Entities", "Nuevo.Entities\Nuevo.Entities.csproj", "{05E6104C-52B2-469D-83E4-028BE167CC3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nuevo.Entities", "Nuevo.Entities\Nuevo.Entities.csproj", "{05E6104C-52B2-469D-83E4-028BE167CC3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuevo.DataAccess", "Nuevo.DataAcces\Nuevo.DataAccess.csproj", "{484BEF6C-BAB1-4F5F-BC48-1B1DCADB0D26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nuevo.DataAccess", "Nuevo.DataAcces\Nuevo.DataAccess.csproj", "{484BEF6C-BAB1-4F5F-BC48-1B1DCADB0D26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuevo.Business", "Nuevo.Business\Nuevo.Business.csproj", "{26A63177-B62C-4A1E-9C1B-F6DD8F7BE5E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nuevo.Business", "Nuevo.Business\Nuevo.Business.csproj", "{26A63177-B62C-4A1E-9C1B-F6DD8F7BE5E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nuevo.WebUI", "Nuevo.WebUI\Nuevo.WebUI.csproj", "{B03A4539-6C9E-4086-B257-95CFCEEE152F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nuevo.WebUI", "Nuevo.WebUI\Nuevo.WebUI.csproj", "{B03A4539-6C9E-4086-B257-95CFCEEE152F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{625B527F-E901-4DD3-876E-5FDE8CB1EF36}"
+	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
