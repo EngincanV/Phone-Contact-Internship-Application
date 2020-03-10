@@ -5,3 +5,4 @@ C:\Users\engin\source\repos\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.E
 C:\Users\engin\source\repos\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.AssemblyInfo.cs
 C:\Users\engin\source\repos\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.dll
 C:\Users\engin\source\repos\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.pdb
+C:\Users\engin\source\repos\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.csprojAssemblyReference.cache
