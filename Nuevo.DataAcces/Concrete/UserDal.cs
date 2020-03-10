@@ -19,5 +19,10 @@ namespace Nuevo.DataAccess.Concrete
                 _context.Users.FirstOrDefault(p => p.Username.Equals(username) && p.Password.Equals(password));
             return isUserExist;
         }
+
+        public User GetUserByUsername(string username)
+        {
+            return _context.Users.FirstOrDefault(p => p.Username.Equals(username));
+        }
     }
 }

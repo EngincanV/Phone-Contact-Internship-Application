@@ -17,5 +17,15 @@ namespace Nuevo.Business.Concrete
         {
             return _userDal.IsUserExist(username, password);
         }
+
+        public User GetUserByUsername(string username)
+        {
+            return _userDal.GetUserByUsername(username);
+        }
+
+        public void Update(User user)
+        {
+            _userDal.Update(user);
+        }
     }
 }
