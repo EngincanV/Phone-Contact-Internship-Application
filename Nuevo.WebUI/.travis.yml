@@ -1,6 +1,0 @@
-language: csharp
-solution: Nuevo.sln
-mono: none
-dotnet: 3.1
-script: 
-	- dotnet restore

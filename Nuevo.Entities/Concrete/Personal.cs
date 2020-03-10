@@ -6,7 +6,6 @@ namespace Nuevo.Entities.Concrete
 {
     public class Personal : IEntity
     {
-        [ForeignKey("User")]
         public int Id { get; set; }
 
         [StringLength(50)]

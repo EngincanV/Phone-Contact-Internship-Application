@@ -130,7 +130,6 @@ C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Nuevo.WebU
 C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Nuevo.WebUI.RazorCoreGenerate.cache
 C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs

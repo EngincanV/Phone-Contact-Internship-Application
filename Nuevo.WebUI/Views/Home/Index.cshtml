@@ -1,8 +1,34 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using Nuevo.Entities.Concrete
+@{
+    ViewData["Title"] = "Public UI - Everyone can see this page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model IList<Personal>
+
+<div class="row col-12">
+    @foreach (var personal in Model)
+    {
+        <div class="card text-center col-5 m-auto">
+            <div class="card-body">
+                <h4 class="card-title">Personal Informations</h4>
+                <hr/>
+                <table class="table table-borderless table-hover">
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            @personal.Name
+                        </td>
+                        <td>
+                            @personal.PhoneNumber
+                        </td>
+                    </tr>
+                </table>
+                <a asp-controller="Personal" asp-action="Detail" asp-route-id="@personal.Id" class="card-link">Detay Görüntüle...</a>
+            </div>
+        </div>
+
+    }
 </div>
