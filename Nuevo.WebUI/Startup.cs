@@ -37,6 +37,10 @@ namespace Nuevo.WebUI
             services.AddScoped<IRoleService, RoleManager>();
             services.AddScoped<IPersonalDal, PersonalDal>();
             services.AddScoped<IPersonalService, PersonalManager>();
+            services.AddScoped<IDepartmanService, DepartmanManager>();
+            services.AddScoped<IDepartmantDal, DepartmantDal>();
+            services.AddScoped<IManagerDal, ManagerDal>();
+            services.AddScoped<IManagerService, ManagerManager>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

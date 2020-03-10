@@ -18,5 +18,10 @@ namespace Nuevo.Business.Concrete
         {
             return _personalDal.GetAll();
         }
+
+        public Personal GetById(int id)
+        {
+            return _personalDal.GetById(id);
+        }
     }
 }

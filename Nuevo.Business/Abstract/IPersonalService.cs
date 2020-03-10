@@ -6,5 +6,6 @@ namespace Nuevo.Business.Abstract
     public interface IPersonalService
     {
         IList<Personal> GetAll();
+        Personal GetById(int id);
     }
 }

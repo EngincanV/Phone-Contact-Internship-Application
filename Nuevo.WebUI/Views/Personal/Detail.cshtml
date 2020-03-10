@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+}
+@model PersonalDetailView
+
+    <div class="card text-center col-8 text-center mx-auto">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Personal.Name @Model.Personal.Surname</h5>
+        </div>
+        <table class="table table-borderless table-hover">
+            <tr>
+                <th>Phone</th>
+                <th>Departmant</th>
+                <th colspan="2">Manager</th>
+            </tr>
+            <tr>
+                <td>
+                    @Model.Personal.PhoneNumber
+                </td>
+                <td>
+                    @Model.Departmant.Name
+                </td>
+                <td>
+                    @Model.Manager.Name @Model.Manager.Surname
+                </td>
+            </tr>
+        </table>
+    </div>
+
