@@ -1,14 +1,15 @@
-﻿using Nuevo.Business.Abstract;
+﻿using System.Collections.Generic;
+using Nuevo.Business.Abstract;
 using Nuevo.DataAccess.Abstract;
 using Nuevo.Entities.Concrete;
 
 namespace Nuevo.Business.Concrete
 {
-    public class DepartmanManager : IDepartmanService
+    public class DepartmantManager : IDepartmantService
     {
         private readonly IDepartmantDal _departmantDal;
 
-        public DepartmanManager(IDepartmantDal departmantDal)
+        public DepartmantManager(IDepartmantDal departmantDal)
         {
             _departmantDal = departmantDal;
         }
@@ -16,6 +17,11 @@ namespace Nuevo.Business.Concrete
         public Departmant GetById(int id)
         {
             return _departmantDal.GetById(id);
+        }
+
+        public IList<Departmant> GetAll()
+        {
+            return _departmantDal.GetAll();
         }
     }
 }

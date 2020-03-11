@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Nuevo.Business.Abstract;
+using Nuevo.Entities.Concrete;
 using Nuevo.WebUI.Models;
 
 namespace Nuevo.WebUI.Controllers
@@ -9,10 +13,17 @@ namespace Nuevo.WebUI.Controllers
     public class ManagerController : Controller
     {
         private readonly IUserService _userService;
+        private readonly IManagerService _managerService;
+        private readonly IDepartmantService _departmantService;
+        private readonly IPersonalService _personalService;
 
-        public ManagerController(IUserService userService)
+
+        public ManagerController(IUserService userService, IManagerService managerService, IDepartmantService departmantService, IPersonalService personalService)
         {
             _userService = userService;
+            _managerService = managerService;
+            _departmantService = departmantService;
+            _personalService = personalService;
         }
 
         [HttpPost]
@@ -33,6 +44,63 @@ namespace Nuevo.WebUI.Controllers
             }
 
             return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet("{controller}/add-personal")]
+        public IActionResult AddPersonal()
+        {
+            List<SelectListItem> departmantItems = new List<SelectListItem>();
+            var departmants = _departmantService.GetAll();
+
+            List<SelectListItem> managerItems = new List<SelectListItem>();
+            var managers = _managerService.GetAll();
+
+            foreach (var departmant in departmants)
+            {
+                departmantItems.Add(new SelectListItem { Text = departmant.Name, Value = departmant.Id.ToString() });
+            }
+
+            foreach (var manager in managers)
+            {
+                managerItems.Add(new SelectListItem { Text = manager.Name + " " + manager.Surname, Value = manager.Id.ToString() });
+            }
+
+            PersonalAddView personalAddView = new PersonalAddView
+            {
+                Departmant = departmantItems,
+                Manager = managerItems
+            };
+
+            return View(personalAddView);
+        }
+
+        [HttpPost("{controller}/add-personal")]
+        public IActionResult AddPersonal([Bind("Name, Surname, PhoneNumber, DepartmantId, ManagerId")] PersonalAddView personal)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    Personal newPersonal = new Personal
+                    {
+                        DepartmantId = Convert.ToInt32(personal.DepartmantId),
+                        ManagerId = Convert.ToInt32(personal.ManagerId),
+                        Name = personal.Name,
+                        Surname = personal.Surname,
+                        PhoneNumber = personal.PhoneNumber
+                    };
+                    _personalService.Add(newPersonal);
+                    return RedirectToAction("Index", "Home");
+                }
+                catch
+                {
+                    ViewBag.error = "Personal could not added";
+                    return RedirectToAction("AddPersonal");
+                }
+            }
+
+            ViewBag.error = "Please fill the blank fields correctly.";
+            return RedirectToAction("AddPersonal");
         }
     }
 }

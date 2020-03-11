@@ -7,5 +7,6 @@ namespace Nuevo.Business.Abstract
     {
         IList<Personal> GetAll();
         Personal GetById(int id);
+        void Add(Personal personal);
     }
 }

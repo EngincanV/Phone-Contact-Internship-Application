@@ -4,7 +4,7 @@
 @if ((User.FindFirst(claim => claim.Type == ClaimTypes.Role)?.Value == "Admin"))
 {
     <ul class="navbar nav">
-        <li class="nav-item">
+        <li class="nav-item text-right">
             <div class="dropdown">
                 <a class="dropbtn nav-link text-white text-center">Account</a>
                 <div class="dropdown-content">
@@ -33,19 +33,19 @@
                         <div class="form-group">
                             <label for="inputPassword" class="col-form-label">Current Password</label>
                             <div class="col-sm-10">
-                                <input type="password" asp-for="@Model.CurrentPassword" class="form-control" placeholder="Password"/>
+                                <input required type="password" asp-for="@Model.CurrentPassword" class="form-control" placeholder="Password"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword" class="col-form-label">New Password</label>
                             <div class="col-sm-10">
-                                <input type="password" asp-for="@Model.NewPassword" class="form-control" placeholder="Password"/>
+                                <input required type="password" asp-for="@Model.NewPassword" class="form-control" placeholder="Password"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword" class="col-form-label">New Password Again</label>
                             <div class="col-sm-10">
-                                <input type="password" asp-for="@Model.NewPasswordAgain" class="form-control" placeholder="Password"/>
+                                <input required type="password" asp-for="@Model.NewPasswordAgain" class="form-control" placeholder="Password"/>
                             </div>
                         </div>
                     </div>

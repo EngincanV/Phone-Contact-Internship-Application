@@ -19,11 +19,10 @@ namespace Nuevo.Entities.Concrete
         [StringLength(50)]
         [Column(TypeName = "varchar(50)")]
         public string PhoneNumber { get; set; }
-        public int DepartmentId { get; set; }
+        public int DepartmantId { get; set; }
         public int ManagerId { get; set; }
 
         public Manager Manager { get; set; }
         public Departmant Departmant { get; set; }
-        public User User { get; set; }
     }
 }

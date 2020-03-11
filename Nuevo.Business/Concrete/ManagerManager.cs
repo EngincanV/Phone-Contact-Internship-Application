@@ -1,4 +1,5 @@
-﻿using Nuevo.Business.Abstract;
+﻿using System.Collections.Generic;
+using Nuevo.Business.Abstract;
 using Nuevo.DataAccess.Abstract;
 using Nuevo.Entities.Concrete;
 
@@ -16,6 +17,11 @@ namespace Nuevo.Business.Concrete
         public Manager GetById(int id)
         {
             return _managerDal.GetById(id);
+        }
+
+        public IList<Manager> GetAll()
+        {
+            return _managerDal.GetAll();
         }
     }
 }

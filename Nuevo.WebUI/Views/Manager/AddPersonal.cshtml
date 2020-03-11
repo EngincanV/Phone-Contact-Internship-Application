@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "AddPersonal";
+}
+@model PersonalAddView
+
+    <form class="text-center border border-light p-5" asp-controller="Manager" asp-action="AddPersonal" method="post">
+        <p class="h4 mb-4 display-4">Add Personal</p>
+        <br />
+
+        <!-- Name -->
+        <div class="form-group col-12 row">
+            <label class="col-3 pt-1">Name: </label>
+            <input asp-for="Name" required type="text" class="form-control mb-4 col-9" placeholder="Name">
+        </div>
+
+        <!-- Surname -->
+        <div class="form-group col-12 row">
+            <label class="col-3 pt-1">Surname: </label>
+            <input asp-for="Surname" required type="text" class="form-control mb-4 col-9" placeholder="Surname">
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-group col-12 row">
+            <label class="col-3 pt-1">Phone Number: </label>
+            <input asp-for="PhoneNumber" required type="text" class="form-control mb-4 col-9" placeholder="Phone Number">
+        </div>
+
+        <!-- Departmant -->
+        <div class="form-group col-12 row">
+            <label class="col-3 pt-1">Departmant: </label>
+            <select asp-for="@Model.DepartmantId" asp-items="@Model.Departmant" required class="browser-default custom-select mb-4 col-9">
+                <option value="" disabled>Choose Option</option>
+            </select>
+        </div>
+
+        <!-- Manager -->
+        <div class="form-group col-12 row">
+            <label class="col-3 pt-1">Manager: </label>
+            <select asp-for="ManagerId" asp-items="@Model.Manager" required class="browser-default custom-select mb-4 col-9">
+                <option value="" disabled>Choose option</option>
+            </select>
+        </div>
+
+        <!-- Send button -->
+        <button class="btn btn-info btn-block" style="background-color: #007bff !important" type="submit">Send</button>
+        
+        @if (ViewBag.error != null)
+        {
+            <div class="alert alert-danger">
+                @ViewBag.error
+            </div>
+        }
+
+    </form>

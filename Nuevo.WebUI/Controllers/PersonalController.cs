@@ -7,10 +7,10 @@ namespace Nuevo.WebUI.Controllers
     public class PersonalController : Controller
     {
         private readonly IPersonalService _personalService;
-        private readonly IDepartmanService _departmantService;
+        private readonly IDepartmantService _departmantService;
         private readonly IManagerService _managerService;
 
-        public PersonalController(IPersonalService personalService, IDepartmanService departmantService, IManagerService managerService)
+        public PersonalController(IPersonalService personalService, IDepartmantService departmantService, IManagerService managerService)
         {
             _personalService = personalService;
             _departmantService = departmantService;
@@ -26,7 +26,7 @@ namespace Nuevo.WebUI.Controllers
 
             if (getUser != null)
             {
-                var departmantInfo = _departmantService.GetById(getUser.DepartmentId);
+                var departmantInfo = _departmantService.GetById(getUser.DepartmantId);
                 var managerInfo = _managerService.GetById(getUser.ManagerId);
 
                 var personalDetail = new PersonalDetailView

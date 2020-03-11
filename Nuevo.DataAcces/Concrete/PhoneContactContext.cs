@@ -9,7 +9,7 @@ namespace Nuevo.DataAccess.Concrete
 
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
-        public DbSet<Personal> Personals { get; set; }
+        public DbSet<Personal> Personels { get; set; }
         public DbSet<Departmant> Departmants { get; set; }
         public DbSet<Manager> Managers { get; set; }
     }

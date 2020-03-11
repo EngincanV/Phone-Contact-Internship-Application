@@ -2,7 +2,7 @@
 
 namespace Nuevo.DataAccess.Migrations
 {
-    public partial class Initializer2 : Migration
+    public partial class Initializer1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -73,7 +73,7 @@ namespace Nuevo.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Personals",
+                name: "Personels",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -81,48 +81,35 @@ namespace Nuevo.DataAccess.Migrations
                     Name = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
                     Surname = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
                     PhoneNumber = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: true),
-                    DepartmentId = table.Column<int>(nullable: false),
-                    ManagerId = table.Column<int>(nullable: false),
-                    DepartmantId = table.Column<int>(nullable: true),
-                    UserId = table.Column<int>(nullable: true)
+                    DepartmantId = table.Column<int>(nullable: false),
+                    ManagerId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Personals", x => x.Id);
+                    table.PrimaryKey("PK_Personels", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Personals_Departmants_DepartmantId",
+                        name: "FK_Personels_Departmants_DepartmantId",
                         column: x => x.DepartmantId,
                         principalTable: "Departmants",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Personals_Managers_ManagerId",
+                        name: "FK_Personels_Managers_ManagerId",
                         column: x => x.ManagerId,
                         principalTable: "Managers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Personals_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Personals_DepartmantId",
-                table: "Personals",
+                name: "IX_Personels_DepartmantId",
+                table: "Personels",
                 column: "DepartmantId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Personals_ManagerId",
-                table: "Personals",
+                name: "IX_Personels_ManagerId",
+                table: "Personels",
                 column: "ManagerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Personals_UserId",
-                table: "Personals",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_RoleId",
@@ -133,7 +120,7 @@ namespace Nuevo.DataAccess.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Personals");
+                name: "Personels");
 
             migrationBuilder.DropTable(
                 name: "Departmants");
