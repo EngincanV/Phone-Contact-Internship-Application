@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model DepartmentView
+
+<div class="row col-12">
+    <div class="col-7">
+        @foreach (var departmant in Model.Departmants)
+        {
+            <div class="card text-center ml-2 mt-2" style="width: 18rem; display: inline-block !important">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        @departmant.Name
+                    </li>
+                </ul>
+                <div class="card-body">
+                    <form method="post">
+                        <button class="btn btn-danger" asp-controller="Departmans" asp-action="Delete" asp-route-id="@departmant.Id">Delete</button>
+                        <button type="button" data-toggle="modal" data-target="#departmentEdit-@departmant.Id" class="btn btn-info">Edit</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="departmentEdit-@departmant.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Edit Department</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label class="text-left">Department Name</label>
+                                            <input type="hidden" asp-for="Departmant.Id" value="@departmant.Id"/>
+                                            <input asp-for="Departmant.Name" type="text" class="form-control" placeholder="Department Name" value="@departmant.Name">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary" asp-controller="Departmans" asp-action="Edit" asp-route-id="@departmant.Id">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-5">
+        <div class="card mt-2" style="width: 100%">
+            <img class="card-img-top" src="/images/department.jfif" alt="Card image cap">
+            <div class="card-body">
+                <form method="post" asp-controller="Departmans" asp-action="AddDepartmant">
+                    <div class="form-group text-center">
+                        <label for="exampleInputEmail1">Department Name</label>
+                        <input asp-for="@Model.Departmant.Name" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Department Name">
+                    </div>
+                    <div class="form-group text-center">
+                        <button class="btn btn-success btn-block">
+                            Add
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

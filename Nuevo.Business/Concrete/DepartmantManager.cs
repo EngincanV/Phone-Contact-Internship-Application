@@ -23,5 +23,20 @@ namespace Nuevo.Business.Concrete
         {
             return _departmantDal.GetAll();
         }
+
+        public void Add(Departmant departmant)
+        {
+            _departmantDal.Add(departmant);
+        }
+
+        public void Delete(int id)
+        {
+            _departmantDal.Delete(id);
+        }
+
+        public void Update(Departmant departmant)
+        {
+            _departmantDal.Update(departmant);
+        }
     }
 }

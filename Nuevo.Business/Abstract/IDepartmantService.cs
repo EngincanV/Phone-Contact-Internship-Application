@@ -7,5 +7,8 @@ namespace Nuevo.Business.Abstract
     {
         Departmant GetById(int id);
         IList<Departmant> GetAll();
+        void Add(Departmant departmant);
+        void Delete(int id);
+        void Update(Departmant departmant);
     }
 }

@@ -146,3 +146,4 @@ C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Nuevo.WebU
 C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Nuevo.WebUI.pdb
 C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Personal\Detail.cshtml.g.cs
 C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Manager\AddPersonal.cshtml.g.cs
+C:\Users\engin\source\repos\Nuevo\Nuevo.WebUI\obj\Debug\netcoreapp3.1\Razor\Views\Departmans\Index.cshtml.g.cs
