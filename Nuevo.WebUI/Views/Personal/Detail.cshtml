@@ -8,7 +8,7 @@
 <div class="card text-center col-8 text-center mx-auto">
     <div class="card-body">
         <h5 class="card-title">@Model.Personal.Name @Model.Personal.Surname</h5>
-        <hr/>
+        <hr />
     </div>
     <table class="table table-borderless table-hover table-responsive-sm table-responsive-md">
         <tr>
@@ -17,7 +17,7 @@
             <th>Manager</th>
             @if ((User.FindFirst(claim => claim.Type == ClaimTypes.Role)?.Value == "Admin"))
             {
-                <th colspan="4">Actions</th>
+                <th colspan="2">Actions</th>
             }
         </tr>
         <tr>
@@ -34,8 +34,11 @@
             {
                 <td>
                     <form method="post">
-                        <button class="btn btn-danger" asp-controller="Manager" asp-action="DeletePersonal" asp-route-id="@Model.Personal.Id">Delete</button>
+                        <button disabled="disabled" class="btn btn-danger" asp-controller="Manager" asp-action="DeletePersonal" asp-route-id="@Model.Personal.Id" id="btnDelete">Delete</button>
                     </form>
+                    <input type="hidden" id="isDisable" value=@(Model.isDisabled ? "true" : "false") />
+                </td>
+                <td>
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1">Edit</button>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -80,7 +83,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <input type="hidden" asp-for="@Model.Personal.Id" value="@Model.Personal.Id"/>
+                                    <input type="hidden" asp-for="@Model.Personal.Id" value="@Model.Personal.Id" />
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                                         <button type="submit" class="btn btn-primary">Save changes</button>
@@ -94,4 +97,14 @@
         </tr>
     </table>
 </div>
-
+@if ((User.FindFirst(claim => claim.Type == ClaimTypes.Role)?.Value == "Admin"))
+{
+    <script>
+        var isDisable = document.getElementById("isDisable").value;
+        var btnDelete = document.getElementById("btnDelete");
+        if (isDisable === "true") {
+            btnDelete.removeAttribute("disabled");
+        }
+        console.log(isDisable, btnDelete);
+    </script>
+}

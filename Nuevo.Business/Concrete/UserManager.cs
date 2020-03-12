@@ -27,5 +27,10 @@ namespace Nuevo.Business.Concrete
         {
             _userDal.Update(user);
         }
+
+        public User GetUserId(int id)
+        {
+            return _userDal.GetById(id);
+        }
     }
 }

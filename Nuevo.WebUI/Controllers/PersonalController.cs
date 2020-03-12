@@ -13,12 +13,14 @@ namespace Nuevo.WebUI.Controllers
         private readonly IPersonalService _personalService;
         private readonly IDepartmantService _departmantService;
         private readonly IManagerService _managerService;
+        private readonly IUserService _userService;
 
-        public PersonalController(IPersonalService personalService, IDepartmantService departmantService, IManagerService managerService)
+        public PersonalController(IPersonalService personalService, IDepartmantService departmantService, IManagerService managerService, IUserService userService)
         {
             _personalService = personalService;
             _departmantService = departmantService;
             _managerService = managerService;
+            _userService = userService;
         }
 
         public IActionResult Detail(int? id)
@@ -31,6 +33,7 @@ namespace Nuevo.WebUI.Controllers
             var getUser = _personalService.GetById((int)id);
             var departmantItems = helpers.GetDepartmantItems(getUser, _departmantService);
             var managerItems = helpers.GetManagerItems(getUser, _managerService);
+            var username = _userService.GetUserId(getUser.ManagerId).Username;
 
             if (getUser != null)
             {
@@ -43,7 +46,8 @@ namespace Nuevo.WebUI.Controllers
                     Departmant = departmantInfo,
                     Manager = managerInfo,
                     Departmants = departmantItems,
-                    Managers = managerItems
+                    Managers = managerItems,
+                    isDisabled = username == User.Identity.Name ? true : false
                 };
 
                 return View(personalDetail);

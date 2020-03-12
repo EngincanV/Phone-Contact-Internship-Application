@@ -7,5 +7,6 @@ namespace Nuevo.Business.Abstract
         User IsUserExist(string username, string password);
         User GetUserByUsername(string username);
         void Update(User user);
+        User GetUserId(int id);
     }
 }

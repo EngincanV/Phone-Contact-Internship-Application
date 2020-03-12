@@ -110,13 +110,19 @@ namespace Nuevo.WebUI.Controllers
             if (id == null)
                 return BadRequest();
 
+            var user = _userService.GetUserByUsername(User.Identity.Name);
             var personal = _personalService.GetById((int)id);
 
             if (personal == null)
                 return NotFound();
 
-            _personalService.Delete((int)id);
-            return RedirectToAction("Index", "Home");
+            if (user.Id == personal.ManagerId)
+            {
+                _personalService.Delete((int)id);
+                return RedirectToAction("Index", "Home");
+            }
+
+            return RedirectToAction("Detail", "Personal", personal.Id);
         }
 
         [HttpPost("{controller}/edit-personal")]
