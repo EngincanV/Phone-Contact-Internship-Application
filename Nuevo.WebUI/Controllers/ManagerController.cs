@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Nuevo.Business.Abstract;
 using Nuevo.Entities.Concrete;
 using Nuevo.WebUI.Models;
@@ -16,7 +17,6 @@ namespace Nuevo.WebUI.Controllers
         private readonly IManagerService _managerService;
         private readonly IDepartmantService _departmantService;
         private readonly IPersonalService _personalService;
-
 
         public ManagerController(IUserService userService, IManagerService managerService, IDepartmantService departmantService, IPersonalService personalService)
         {
@@ -101,6 +101,48 @@ namespace Nuevo.WebUI.Controllers
 
             ViewBag.error = "Please fill the blank fields correctly.";
             return RedirectToAction("AddPersonal");
+        }
+
+        [HttpPost("{controller}/delete-personal")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePersonal(int? id)
+        {
+            if (id == null)
+                return BadRequest();
+
+            var personal = _personalService.GetById((int)id);
+
+            if (personal == null)
+                return NotFound();
+
+            _personalService.Delete((int)id);
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost("{controller}/edit-personal")]
+        public IActionResult EditPersonal(int id, [Bind("Id, Name, Surname, PhoneNumber, DepartmantId, ManagerId")]Personal personal)
+        {
+            if (id != personal.Id)
+                return NotFound();
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _personalService.Update(personal);
+                    return RedirectToAction("Index", "Home");
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (_personalService.GetById(id) == null)
+                        return NotFound();
+
+                    else
+                        throw;
+                }
+            }
+
+            return RedirectToAction("EditPersonal", "Manager", id);
         }
     }
 }

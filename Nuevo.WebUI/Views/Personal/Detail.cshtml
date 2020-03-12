@@ -2,29 +2,96 @@
 @{
     ViewData["Title"] = "Detail";
 }
+@using System.Security.Claims
 @model PersonalDetailView
 
-    <div class="card text-center col-8 text-center mx-auto">
-        <div class="card-body">
-            <h5 class="card-title">@Model.Personal.Name @Model.Personal.Surname</h5>
-        </div>
-        <table class="table table-borderless table-hover table-responsive-sm table-responsive-md">
-            <tr>
-                <th>Phone</th>
-                <th>Departmant</th>
-                <th colspan="2">Manager</th>
-            </tr>
-            <tr>
-                <td>
-                    @Model.Personal.PhoneNumber
-                </td>
-                <td>
-                    @Model.Departmant.Name
-                </td>
-                <td>
-                    @Model.Manager.Name @Model.Manager.Surname
-                </td>
-            </tr>
-        </table>
+<div class="card text-center col-8 text-center mx-auto">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Personal.Name @Model.Personal.Surname</h5>
+        <hr/>
     </div>
+    <table class="table table-borderless table-hover table-responsive-sm table-responsive-md">
+        <tr>
+            <th>Phone</th>
+            <th>Departmant</th>
+            <th>Manager</th>
+            @if ((User.FindFirst(claim => claim.Type == ClaimTypes.Role)?.Value == "Admin"))
+            {
+                <th colspan="4">Actions</th>
+            }
+        </tr>
+        <tr>
+            <td>
+                @Model.Personal.PhoneNumber
+            </td>
+            <td>
+                @Model.Departmant.Name
+            </td>
+            <td>
+                @Model.Manager.Name @Model.Manager.Surname
+            </td>
+            @if ((User.FindFirst(claim => claim.Type == ClaimTypes.Role)?.Value == "Admin"))
+            {
+                <td>
+                    <form method="post">
+                        <button class="btn btn-danger" asp-controller="Manager" asp-action="DeletePersonal" asp-route-id="@Model.Personal.Id">Delete</button>
+                    </form>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal1">Edit</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form asp-controller="Manager" asp-action="EditPersonal" asp-route-id="@Model.Personal.Id" method="post">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-dark" id="exampleModalLabel">Edit Personal</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-left">
+                                        <div class="form-group">
+                                            <label for="inputName" class="col-form-label">Name</label>
+                                            <div>
+                                                <input required type="text" asp-for="@Model.Personal.Name" class="form-control" placeholder="Name..." value="@Model.Personal.Name" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputSurname" class="col-form-label">Surname</label>
+                                            <div>
+                                                <input required type="text" asp-for="@Model.Personal.Surname" class="form-control" placeholder="Surname..." value="@Model.Personal.Surname" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPhone" class="col-form-label">Phone</label>
+                                            <div>
+                                                <input required type="tel" asp-for="@Model.Personal.PhoneNumber" class="form-control" placeholder="Phone Number..." value="@Model.Personal.PhoneNumber" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="pt-1">Departmant: </label>
+                                            <select asp-for="@Model.Personal.DepartmantId" asp-items="@Model.Departmants" required class="browser-default custom-select mb-4">
+                                                <option value="" disabled>Choose Option</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="pt-1">Manager: </label>
+                                            <select asp-for="@Model.Personal.ManagerId" asp-items="@Model.Managers" required class="browser-default custom-select mb-4">
+                                                <option value="" disabled>Choose Option</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" asp-for="@Model.Personal.Id" value="@Model.Personal.Id"/>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            }
+        </tr>
+    </table>
+</div>
 

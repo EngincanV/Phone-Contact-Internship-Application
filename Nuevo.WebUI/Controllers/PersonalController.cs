@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Nuevo.Business.Abstract;
 using Nuevo.WebUI.Models;
+using System.Collections.Generic;
+using Nuevo.Entities.Concrete;
+using Nuevo.WebUI.Helpers;
 
 namespace Nuevo.WebUI.Controllers
 {
@@ -22,7 +26,11 @@ namespace Nuevo.WebUI.Controllers
             if (id == null)
                 return RedirectToAction("Index", "Home");
 
+            var helpers = new SelectDetails();
+
             var getUser = _personalService.GetById((int)id);
+            var departmantItems = helpers.GetDepartmantItems(getUser, _departmantService);
+            var managerItems = helpers.GetManagerItems(getUser, _managerService);
 
             if (getUser != null)
             {
@@ -33,7 +41,9 @@ namespace Nuevo.WebUI.Controllers
                 {
                     Personal = getUser,
                     Departmant = departmantInfo,
-                    Manager = managerInfo
+                    Manager = managerInfo,
+                    Departmants = departmantItems,
+                    Managers = managerItems
                 };
 
                 return View(personalDetail);

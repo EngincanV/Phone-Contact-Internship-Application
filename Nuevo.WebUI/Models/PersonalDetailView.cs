@@ -1,4 +1,6 @@
-﻿using Nuevo.Entities.Concrete;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Nuevo.Entities.Concrete;
+using System.Collections.Generic;
 
 namespace Nuevo.WebUI.Models
 {
@@ -7,5 +9,8 @@ namespace Nuevo.WebUI.Models
         public Personal Personal { get; set; }
         public Departmant Departmant { get; set; }
         public Manager Manager { get; set; }
+
+        public List<SelectListItem> Departmants { get; set; }
+        public List<SelectListItem> Managers { get; set; }
     }
 }

@@ -28,5 +28,15 @@ namespace Nuevo.Business.Concrete
         {
             _personalDal.Add(personal);
         }
+
+        public void Delete(int id)
+        {
+            _personalDal.Delete(id);
+        }
+
+        public void Update(Personal personal)
+        {
+            _personalDal.Update(personal);
+        }
     }
 }
