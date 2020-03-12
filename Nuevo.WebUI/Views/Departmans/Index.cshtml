@@ -1,7 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Index";
 }
+@using Nuevo.Business.Abstract
 @model DepartmentView
+@inject IPersonalService _personalService
 
 <div class="row col-12">
     <div class="col-7">
@@ -15,7 +17,7 @@
                 </ul>
                 <div class="card-body">
                     <form method="post">
-                        <button class="btn btn-danger" asp-controller="Departmans" asp-action="Delete" asp-route-id="@departmant.Id">Delete</button>
+                        <button disabled="@(_personalService.GetAllByDepartmentId(departmant.Id).Count >= 1 ? true : false)" class="btn btn-danger" asp-controller="Departmans" asp-action="Delete" asp-route-id="@departmant.Id">Delete</button>
                         <button type="button" data-toggle="modal" data-target="#departmentEdit-@departmant.Id" class="btn btn-info">Edit</button>
                         <!-- Modal -->
                         <div class="modal fade" id="departmentEdit-@departmant.Id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

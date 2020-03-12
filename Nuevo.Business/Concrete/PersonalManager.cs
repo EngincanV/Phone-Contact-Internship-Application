@@ -38,5 +38,10 @@ namespace Nuevo.Business.Concrete
         {
             _personalDal.Update(personal);
         }
+
+        public List<Personal> GetAllByDepartmentId(int departmentId)
+        {
+            return _personalDal.GetAllByDepartmentId(departmentId);
+        }
     }
 }

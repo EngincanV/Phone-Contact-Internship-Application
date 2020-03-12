@@ -9,10 +9,12 @@ namespace Nuevo.WebUI.Controllers
     public class DepartmansController : Controller
     {
         private readonly IDepartmantService _departmantService;
+        private readonly IPersonalService _personalService;
 
-        public DepartmansController(IDepartmantService departmantService)
+        public DepartmansController(IDepartmantService departmantService, IPersonalService personalService)
         {
             _departmantService = departmantService;
+            _personalService = personalService;
         }
 
 
@@ -57,11 +59,13 @@ namespace Nuevo.WebUI.Controllers
                 return NotFound();
 
             var department = _departmantService.GetById((int)id);
+            var departmentCount = _personalService.GetAllByDepartmentId((int)id).Count;
 
             if (department == null)
                 return NotFound();
 
-            _departmantService.Delete((int)id);
+            if(departmentCount >= 1)
+                _departmantService.Delete((int)id);
 
             return RedirectToAction("Index", "Departmans");
         }

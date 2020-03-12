@@ -10,5 +10,6 @@ namespace Nuevo.Business.Abstract
         void Add(Personal personal);
         void Delete(int id);
         void Update(Personal personal);
+        List<Personal> GetAllByDepartmentId(int departmentId);
     }
 }
