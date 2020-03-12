@@ -11,3 +11,16 @@ C:\Users\engin\source\repos\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.B
 C:\Users\engin\source\repos\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.Business.csproj.CopyComplete
 C:\Users\engin\source\repos\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.Business.dll
 C:\Users\engin\source\repos\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.Business.pdb
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\bin\Debug\netcoreapp3.1\Nuevo.Business.deps.json
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\bin\Debug\netcoreapp3.1\Nuevo.Business.dll
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\bin\Debug\netcoreapp3.1\Nuevo.Business.pdb
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\bin\Debug\netcoreapp3.1\Nuevo.DataAccess.dll
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\bin\Debug\netcoreapp3.1\Nuevo.Entities.dll
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\bin\Debug\netcoreapp3.1\Nuevo.DataAccess.pdb
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\bin\Debug\netcoreapp3.1\Nuevo.Entities.pdb
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.Business.csprojAssemblyReference.cache
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.Business.AssemblyInfoInputs.cache
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.Business.AssemblyInfo.cs
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.Business.csproj.CopyComplete
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.Business.dll
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Business\obj\Debug\netcoreapp3.1\Nuevo.Business.pdb

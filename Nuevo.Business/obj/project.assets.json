@@ -4952,11 +4952,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Business\\Nuevo.Business.csproj",
+      "projectUniqueName": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Business\\Nuevo.Business.csproj",
       "projectName": "Nuevo.Business",
-      "projectPath": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Business\\Nuevo.Business.csproj",
+      "projectPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Business\\Nuevo.Business.csproj",
       "packagesPath": "C:\\Users\\engin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Business\\obj\\",
+      "outputPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4975,11 +4975,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj"
+            "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj"
             },
-            "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj": {
-              "projectPath": "C:\\Users\\engin\\source\\repos\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj"
+            "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj": {
+              "projectPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj"
             }
           }
         }

@@ -5,3 +5,11 @@ C:\Users\engin\source\repos\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.E
 C:\Users\engin\source\repos\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.AssemblyInfo.cs
 C:\Users\engin\source\repos\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.dll
 C:\Users\engin\source\repos\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.pdb
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Entities\bin\Debug\netcoreapp3.1\Nuevo.Entities.deps.json
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Entities\bin\Debug\netcoreapp3.1\Nuevo.Entities.dll
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Entities\bin\Debug\netcoreapp3.1\Nuevo.Entities.pdb
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.csprojAssemblyReference.cache
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.AssemblyInfoInputs.cache
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.AssemblyInfo.cs
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.dll
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.Entities\obj\Debug\netcoreapp3.1\Nuevo.Entities.pdb

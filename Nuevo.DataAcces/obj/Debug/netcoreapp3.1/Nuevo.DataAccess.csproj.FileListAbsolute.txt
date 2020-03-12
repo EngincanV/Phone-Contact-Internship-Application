@@ -9,3 +9,14 @@ C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.
 C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.csproj.CopyComplete
 C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.dll
 C:\Users\engin\source\repos\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.pdb
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.DataAccess.deps.json
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.DataAccess.dll
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.DataAccess.pdb
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.Entities.dll
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\bin\Debug\netcoreapp3.1\Nuevo.Entities.pdb
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.csprojAssemblyReference.cache
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.AssemblyInfoInputs.cache
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.AssemblyInfo.cs
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.csproj.CopyComplete
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.dll
+C:\Users\engin\OneDrive\Masaüstü\Web Developer\13-Asp.net Core\0.My Own Applications\Nuevo\Nuevo.DataAcces\obj\Debug\netcoreapp3.1\Nuevo.DataAccess.pdb

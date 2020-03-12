@@ -64,9 +64,10 @@ namespace Nuevo.WebUI.Controllers
             if (department == null)
                 return NotFound();
 
-            if(departmentCount >= 1)
-                _departmantService.Delete((int)id);
+            if (departmentCount >= 1)
+                return RedirectToAction("Index", "Departmans");
 
+            _departmantService.Delete((int)id);
             return RedirectToAction("Index", "Departmans");
         }
 
