@@ -18,7 +18,6 @@
 
 * [About Project](#about-project)
   * [Purpose Of Project](#purpose-of-project)
-  * [Screenshots](#screenshots)
 * [Installation](#installation)
 
 ## About Project
@@ -38,8 +37,6 @@ This application was created for internship apply to Nuevo.
 * In AdminUI you can add, edit or delete personals. Only condition is here, for deleting any specific personal we need to be his manager.
 * Departmens which are exist in system will be manageable. Adding, Editing and Deleting departments can be done by Admins. For deleting any specific department, the department must not have any personal.
 
-### Screenshots
-
 ## Installation
 1. Clone the repository.
 ```sh
@@ -48,6 +45,10 @@ git clone https://github.com/EngincanV/Phone-Contact-Internship-Application.git
 2. Install npm packages.
 ```sh
 npm install
+```
+3. Run the app.
+```sh
+npm start or yarn start
 ```
 
 <!-- MARKDOWN LINKS & IMAGES -->
