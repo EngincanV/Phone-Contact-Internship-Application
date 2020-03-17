@@ -42,13 +42,13 @@ This application was created for internship apply to Nuevo.
 ```sh
 git clone https://github.com/EngincanV/Phone-Contact-Internship-Application.git
 ```
-2. Install npm packages.
+2. Update Database Migration via Package Manager Console.
 ```sh
-npm install
+Update-Database
 ```
 3. Run the app.
 ```sh
-npm start or yarn start
+dotnet run
 ```
 
 <!-- MARKDOWN LINKS & IMAGES -->
