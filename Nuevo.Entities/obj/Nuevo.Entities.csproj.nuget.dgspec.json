@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj": {}
+    "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.Entities\\Nuevo.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj": {
+    "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.Entities\\Nuevo.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.Entities\\Nuevo.Entities.csproj",
         "projectName": "Nuevo.Entities",
-        "projectPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj",
+        "projectPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.Entities\\Nuevo.Entities.csproj",
         "packagesPath": "C:\\Users\\engin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Entities\\obj\\",
+        "outputPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -25,10 +25,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/p97kmkZ1swC3Tx6F7usD2seGRPZNa3DbSdUla3pOkDfSWd49Do/api": {},
+          "https://nuget.telerik.com/nuget": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +43,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -50,12 +54,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

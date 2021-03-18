@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +10,9 @@ using Nuevo.Business.Abstract;
 using Nuevo.Business.Concrete;
 using Nuevo.DataAccess.Abstract;
 using Nuevo.DataAccess.Concrete;
+using Winton.AspNetCore.Seo;
+using Winton.AspNetCore.Seo.Robots;
+using Winton.AspNetCore.Seo.Sitemaps;
 
 namespace Nuevo.WebUI
 {
@@ -25,7 +29,8 @@ namespace Nuevo.WebUI
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<PhoneContactContext>(options => options.UseSqlServer(Configuration.GetConnectionString("PhoneContactContext")));
+            services.AddDbContext<PhoneContactContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("PhoneContactContext")));
 
             //add authentication
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
@@ -41,6 +46,52 @@ namespace Nuevo.WebUI
             services.AddScoped<IDepartmantDal, DepartmantDal>();
             services.AddScoped<IManagerDal, ManagerDal>();
             services.AddScoped<IManagerService, ManagerManager>();
+
+            //SEO
+            services.AddSeoWithDefaultRobots(
+                options =>
+                {
+                    options.Urls = new List<SitemapUrlOptions>
+                    {
+                        new SitemapUrlOptions
+                        {
+                            Priority = 1.0m,
+                            RelativeUrl = ""
+                        },
+                        new SitemapUrlOptions
+                        {
+                            Priority = 1.0m,
+                            RelativeUrl = "/Manager/add-personal"
+                        },
+                        new SitemapUrlOptions
+                        {
+                            Priority = 1.0m,
+                            RelativeUrl = "/Departmans"
+                        },
+                        new SitemapUrlOptions
+                        {
+                            Priority = 1.0m,
+                            RelativeUrl = "/Account/Login"
+                        },
+                        new SitemapUrlOptions
+                        {
+                            Priority = 1.0m,
+                            RelativeUrl = "/Account/Logout"
+                        }
+                    };
+                });
+
+            services.AddSeo(options =>
+            {
+                options.RobotsTxt.AddSitemapUrl = true;
+                options.RobotsTxt.UserAgentRecords = new List<UserAgentRecord>
+                {
+                    new UserAgentRecord
+                    {
+                        UserAgent = "*"
+                    }
+                };
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -52,6 +103,7 @@ namespace Nuevo.WebUI
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

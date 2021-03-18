@@ -20,7 +20,7 @@
           "lib/netcoreapp2.1/Microsoft.Bcl.HashCode.dll": {}
         }
       },
-      "Microsoft.CSharp/4.5.0": {
+      "Microsoft.CSharp/4.7.0": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.0/_._": {}
@@ -94,6 +94,22 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/3.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "build": {
+          "build/netcoreapp2.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/3.1.2": {
@@ -1317,10 +1333,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.CSharp/4.5.0": {
-      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+    "Microsoft.CSharp/4.7.0": {
+      "sha512": "pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "type": "package",
-      "path": "microsoft.csharp/4.5.0",
+      "path": "microsoft.csharp/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1333,6 +1349,7 @@
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.3/Microsoft.CSharp.dll",
         "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
         "lib/portable-net45+win8+wp8+wpa81/_._",
         "lib/uap10.0.16299/_._",
         "lib/win8/_._",
@@ -1342,7 +1359,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.4.7.0.nupkg.sha512",
         "microsoft.csharp.nuspec",
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
@@ -1468,6 +1485,22 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.3.1.2.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Design/3.1.2": {
+      "sha512": "DVbwHFZVWp37ti2uAqzSnfLqqvI1TjxLy8xOYm5jAyFLr/9OiGGyJHdtrMr3n62SG28eV3CeD+N4YwedyVhKSQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.design/3.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/net461/Microsoft.EntityFrameworkCore.Design.props",
+        "build/netcoreapp2.0/Microsoft.EntityFrameworkCore.Design.props",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.xml",
+        "microsoft.entityframeworkcore.design.3.1.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/3.1.2": {
@@ -1732,7 +1765,7 @@
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
-      "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "sha512": "OpwT9S+tED9fnbUCttatoqfmjSKo61629wVatHdxnkvMd7RxykQEWDg57F+V8IphGgINzPFAseFFIsFKuIEUQw==",
       "type": "package",
       "path": "microsoft.netcore.targets/1.1.0",
       "files": [
@@ -1787,7 +1820,7 @@
       ]
     },
     "runtime.native.System/4.3.0": {
-      "sha512": "c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
+      "sha512": "TaPhFgi+3AcvboVLoCpBldrd/OzqnVHIu1ZvoYZgm8iFIT5JZhzMur+Oqo3P86pHVmXWlj3EFmmKgrl0EPSYqA==",
       "type": "package",
       "path": "runtime.native.system/4.3.0",
       "files": [
@@ -2019,7 +2052,7 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
+      "sha512": "jKU+PFMmQRLydHLoxir0XUU1Lmi0Z8vC7M0JiWupvOIseOtprbffY2sVUtqVgxckWJdLb+a1Yi7o2nBKk+SpXA==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
@@ -2057,7 +2090,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "LX8ZojlL7yh9Na9rKkCtD7hV4C1/Amp8dQCFTZOxA7CTs3C9b/Ea2Kmh++kZMZoyBWYMJ5wL6ySFvkUW/gRP2w==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -2095,7 +2128,7 @@
       ]
     },
     "System.ComponentModel/4.3.0": {
-      "sha512": "VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+      "sha512": "E7SkZYgUqpTgJg5UN7u0sbxy02ifzNpnZk3xbIKjuYGiueuZOanUJ/gBZgBeAutdKzFOfAfAqdzFQ6v1Vy6dLQ==",
       "type": "package",
       "path": "system.componentmodel/4.3.0",
       "files": [
@@ -2242,7 +2275,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "sha512": "dAqJyiXmjw1Gn0muiaxd1QSDvBRjLJgPKzjeuvbwZ2ShsZJsZop7n1Ut2cvJkAmUFfRkK4uDp/B6UVR9pHwuzw==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
@@ -2280,7 +2313,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "sha512": "AT51MRqWQp8vy5k9VlNwlflt51Tc6WEF8gEDKux5zUvlKA5uXezdNc1wAUg3yhnns1/jhT9g+se8UbI/7D844g==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -2661,7 +2694,7 @@
       ]
     },
     "System.Globalization.Extensions/4.3.0": {
-      "sha512": "FhKmdR6MPG+pxow6wGtNAWdZh7noIOpdD5TwQ3CprzgIE1bBBoim0vbR1+AWsWjQmU7zXHgQo4TWSP6lCeiWcQ==",
+      "sha512": "ThMpDBEigtFBgoDzZ7rszrsblUpzx4ZgiE/kwYUCRHXrAY7BjbgWJgaUukafz23LcH5p9ibIhDGyuTROG4yeyw==",
       "type": "package",
       "path": "system.globalization.extensions/4.3.0",
       "files": [
@@ -2931,7 +2964,7 @@
       ]
     },
     "System.Net.NameResolution/4.3.0": {
-      "sha512": "AFYl08R7MrsrEjqpQWTZWBadqXyTzNDaWpMqyxhb0d6sGhV6xMDKueuBXlLL30gz+DIRY6MpdgnHWlCh5wmq9w==",
+      "sha512": "9ydoAp+WTzmOZsCuPRtOmMSDzi95f4xaciPbHuvWNb2oLnvN2K2vO1Eqnid1I5vXrGiAUJHpNcY8miVaCLEGsw==",
       "type": "package",
       "path": "system.net.nameresolution/4.3.0",
       "files": [
@@ -3147,7 +3180,7 @@
       ]
     },
     "System.Reflection.Emit/4.3.0": {
-      "sha512": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
+      "sha512": "dCEdQWPpBnt40DynYoocxgY7NOKlZMYdFFLNDnEP7Ejx7wFLu0eXGQIRsgKtd7m9+etmPn18DZauHqsR9d5rGw==",
       "type": "package",
       "path": "system.reflection.emit/4.3.0",
       "files": [
@@ -3183,7 +3216,7 @@
       ]
     },
     "System.Reflection.Emit.ILGeneration/4.3.0": {
-      "sha512": "59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
+      "sha512": "dkTsnR3el6gPdplurwR6yX1PYQTDtO/z0JFR5q37pmGJvH8k1IPFq76/7diXtAVMaKOCVNsVA/4SzpqJ81th1g==",
       "type": "package",
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
@@ -3228,7 +3261,7 @@
       ]
     },
     "System.Reflection.Emit.Lightweight/4.3.0": {
-      "sha512": "oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
+      "sha512": "QC8Z3KaVMJDiLVwX16D6Kql6OTys20YhJUkuKjivQidi5TRf1esyxa5dNRNYVfaSXzC/iSWE4fuv2BrIyU/+vA==",
       "type": "package",
       "path": "system.reflection.emit.lightweight/4.3.0",
       "files": [
@@ -3387,7 +3420,7 @@
       ]
     },
     "System.Reflection.TypeExtensions/4.3.0": {
-      "sha512": "7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
+      "sha512": "ObY/vBdLWooMyt32toPSOcFLX2ZFotAPeIwGmEsR9pL4N/2lKhypQLSGi/8YzEOV+Iwz9Z8gue8BhhCsZ/41sw==",
       "type": "package",
       "path": "system.reflection.typeextensions/4.3.0",
       "files": [
@@ -4646,7 +4679,7 @@
       ]
     },
     "System.Threading.Tasks.Extensions/4.3.0": {
-      "sha512": "npvJkVKl5rKXrtl1Kkm6OhOUaYGEiF9wFbppFRWSMoApKzt2PiPHT2Bb8a5sAWxprvdOAtvaARS9QYMznEUtug==",
+      "sha512": "Y8MpaRTwCEmjk2uAIV3ICvYU/ui4opBTEuZYpdxYPoqw/hhlkw1B8fxV3GfFvrIeG2dYqAuSoCqP29BPXGXBIw==",
       "type": "package",
       "path": "system.threading.tasks.extensions/4.3.0",
       "files": [
@@ -4921,6 +4954,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore >= 3.1.2",
+      "Microsoft.EntityFrameworkCore.Design >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Relational >= 3.1.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.2",
       "Nuevo.Entities >= 1.0.0"
@@ -4933,11 +4967,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj",
       "projectName": "Nuevo.DataAccess",
-      "projectPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj",
+      "projectPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.DataAcces\\Nuevo.DataAccess.csproj",
       "packagesPath": "C:\\Users\\engin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.DataAcces\\obj\\",
+      "outputPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.DataAcces\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4951,13 +4985,16 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/p97kmkZ1swC3Tx6F7usD2seGRPZNa3DbSdUla3pOkDfSWd49Do/api": {},
+        "https://nuget.telerik.com/nuget": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj": {
-              "projectPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\Web Developer\\13-Asp.net Core\\0.My Own Applications\\Nuevo\\Nuevo.Entities\\Nuevo.Entities.csproj"
+            "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.Entities\\Nuevo.Entities.csproj": {
+              "projectPath": "C:\\Users\\engin\\OneDrive\\Masaüstü\\asdfasda\\Nuevo.Entities\\Nuevo.Entities.csproj"
             }
           }
         }
@@ -4970,8 +5007,15 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.1.2, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[3.1.2, )"
           },
@@ -4994,12 +5038,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
